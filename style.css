@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "yekanBakh";
+  src: url(font/YekanBakh-Regular.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "yekanBakh";
+  src: url(font/YekanBakh-Bold.ttf);
+  font-weight: 600;
+}
+
+:root {
+  --main-color--: #1c7ed6;
+  --grey-color--: #37b24d;
+  --white-space-background--: #f8f9fa;
+  --border-color--: #adb5bd;
+  --text-color--: #212529;
+  --header-nav-red-border--: #e03131;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "yekanBakh";
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--white-space-background--);
+}
+
+header {
+  border-bottom: 2px solid var(--border-color--);
+  display: flex;
+  flex-direction: column;
+}
+.first-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 10px 40px;
+  margin-bottom: 0;
+  z-index: 1;
+}
+
+.logo-img {
+  height: 75px;
+}
+
+.account-btn {
+  background-color: var(--grey-color--);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.header_account_icon {
+  width: 24px;
+  height: 24px;
+}
+/* .account-sentence {
+} */
+.account-btn-div {
+  font-family: "yekanBakh";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  width: 120px;
+  height: 30px;
+  padding: 5px;
+}
+
+.header-leftSide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  width: 200px;
+}
+
+.buy-basket {
+  stroke: var(--text-color--);
+}
+
+.header-buy-icon-container {
+  background-color: var(--grey-color--);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header-leftSide-separator {
+  color: #adb5bd6d;
+}
+
+.header-nav {
+  margin: 0 40px;
+}
+
+.header-section2-nav-ul {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: end;
+  gap: 0px;
+  list-style: none;
+  z-index: 0;
+  padding-top: 10px;
+}
+
+.header-section2-nav-ul li:nth-child(even) {
+  color: var(--border-color--);
+  cursor: default;
+  padding: 0 10px;
+}
+
+.header-section2-nav-ul li:nth-child(odd) {
+  cursor: pointer;
+  color: var(--text-color--);
+  padding: 0 10px;
+}
+
+.header-nav-blueLine {
+  background-color: var(--main-color--);
+  height: 2.5px;
+  margin-bottom: 3px;
+  opacity: 0;
+  transition: transform 0.5s, width 0.5s, opacity 0.4s;
+}
+
+.display {
+  opacity: 1;
+}
