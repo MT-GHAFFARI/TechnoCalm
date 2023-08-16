@@ -34,6 +34,11 @@ nav.addEventListener("mouseout", function (e) {
 
 ///////////////////////////////////////////
 
-// const
+const hero_section = document.querySelector(".");
+const hide_nav = function (observer) {
+  console.dir(observer);
+};
 
-// const nav_observe=new IntersectionObserver(,{root:null});
+const nav_observe = new IntersectionObserver(hide_nav, {
+  root: null,
+}).observe();
