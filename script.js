@@ -97,3 +97,4 @@ let interval = setInterval(change_picture_container, 2000);
 hero_btn_container.addEventListener("click", change_picture_container);
 
 ///////////////////////////////////////////////////////////////////////////////////
+//sadasmlkmklfnsdnlafdls
