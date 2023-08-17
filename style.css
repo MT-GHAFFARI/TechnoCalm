@@ -13,7 +13,7 @@
 :root {
   --main-color--: #1c7ed6;
   --grey-color--: #37b24d;
-  --white-space-background--: #f8f9fa;
+  --white-space-background--: #fafafa;
   --border-color--: #adb5bd;
   --text-color--: #212529;
   --header-nav-red-border--: #e03131;
@@ -32,11 +32,15 @@ body {
 }
 
 header {
+  background-color: var(--white-space-background--);
   border-bottom: 2px solid var(--border-color--);
   display: flex;
   flex-direction: column;
   position: fixed;
   width: 100%;
+  top: 0;
+  z-index: 1;
+  font-size: 14px;
 }
 .first-section-header {
   display: flex;
@@ -49,7 +53,8 @@ header {
 }
 
 .logo-img {
-  height: 75px;
+  height: 65px;
+  width: 120px;
 }
 
 .account-btn {
@@ -59,19 +64,20 @@ header {
   cursor: pointer;
 }
 .header_account_icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
 }
 /* .account-sentence {
 } */
 .account-btn-div {
+  font-size: 12px;
   font-family: "yekanBakh";
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2px;
-  width: 120px;
-  height: 30px;
+  width: 125px;
+  height: 28px;
   padding: 5px;
 }
 
@@ -113,7 +119,7 @@ header {
   gap: 0px;
   list-style: none;
   z-index: 0;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 .header-section2-nav-ul li:nth-child(even) {
@@ -136,6 +142,79 @@ header {
   transition: transform 0.5s, width 0.5s, opacity 0.4s;
 }
 
+.hero_section {
+  background-color: #212529;
+  margin-top: 105px;
+  z-index: -1;
+  height: 610px;
+  position: relative;
+  z-index: 0;
+}
+.hero-img-box {
+  height: 610px;
+  position: relative;
+}
+.hero-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.change-hero-pic-button {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-btn {
+  font-size: 30px;
+  color: var(--text-color--);
+  background-color: #adb5bd;
+  opacity: 0.3;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  gap: 20px;
+  width: 50px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 0.25s;
+}
+
+.hero-btn:hover {
+  opacity: 0.5;
+}
+
+.point-box {
+  position: absolute;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+.point {
+  background-color: #adb5bd;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  z-index: 1;
+  transition: width 0.25s;
+}
+
 .display {
   opacity: 1;
+}
+
+.change-width {
+  width: 150px;
 }
