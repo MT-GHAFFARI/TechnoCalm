@@ -33,18 +33,26 @@ nav.addEventListener("mouseout", function (e) {
 
 ///////////////////////////////////////////
 
-// const hero_section = document.querySelector(".hero_section");
-// const hide_nav = function (entries, observer) {
-//   console.log(entries);
-//   console.log(observer);
-// };
+const hero_section = document.querySelector(".hero_section");
+const hide_nav = function (entries, observer) {
+  console.log(entries[0]);
+  if (!entries[0].isIntersecting) {
+    nav.classList.add("go-up");
+    document.querySelector("header").classList.add("change-height");
+  }
+  if (entries[0].isIntersecting) {
+    nav.classList.remove("go-up");
+    document.querySelector("header").classList.remove("change-height");
+  }
+};
 
-// const option = {
-//   root: null,
-// };
+const option = {
+  root: null,
+  threshold: 0.5,
+};
 
-// const nav_observer = new IntersectionObserver(hide_nav, option);
-// nav_observer.observe(hero_section);
+const nav_observer = new IntersectionObserver(hide_nav, option);
+nav_observer.observe(hero_section);
 
 /////////////////////////////////////////////////////
 //add point per image in hero section
